@@ -1,0 +1,408 @@
+Prefix(:=<http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(<http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia>
+Import(<http://www.w3.org/ns/ma-ont>)
+
+Declaration(Class(:Audio))
+Declaration(Class(:Comment))
+Declaration(Class(:Document))
+Declaration(Class(:Tag))
+Declaration(Class(:Video))
+Declaration(ObjectProperty(:hasComment))
+Declaration(ObjectProperty(:hasCommetedAt))
+Declaration(ObjectProperty(:hasFamily))
+Declaration(ObjectProperty(:hasFriend))
+Declaration(ObjectProperty(:hasLiked))
+Declaration(ObjectProperty(:hasShared))
+Declaration(ObjectProperty(:hasTag))
+Declaration(ObjectProperty(:hasTaggedAt))
+Declaration(ObjectProperty(:hasUploaded))
+Declaration(ObjectProperty(:isTaggedAt))
+Declaration(ObjectProperty(:owner))
+Declaration(ObjectProperty(:profilePhoto))
+Declaration(DataProperty(:birthday))
+Declaration(DataProperty(:firstName))
+Declaration(DataProperty(:format))
+Declaration(DataProperty(:gender))
+Declaration(DataProperty(:id))
+Declaration(DataProperty(:lastName))
+Declaration(DataProperty(:name))
+Declaration(DataProperty(:nickname))
+Declaration(DataProperty(:owner))
+Declaration(DataProperty(:phoneNumber))
+Declaration(DataProperty(:profilePhoto))
+Declaration(DataProperty(:text))
+Declaration(NamedIndividual(:FlickrPhoto))
+Declaration(NamedIndividual(:Profile1))
+Declaration(NamedIndividual(:Profile2))
+Declaration(NamedIndividual(:Profile3))
+Declaration(NamedIndividual(:Profile4))
+Declaration(NamedIndividual(:Profile5))
+Declaration(NamedIndividual(:ProfileTulio))
+Declaration(NamedIndividual(:Tulio))
+Declaration(NamedIndividual(:WikipediaDocument))
+Declaration(NamedIndividual(:YouTubeVideo))
+Declaration(NamedIndividual(:YouTubeVideoTulioComment))
+Declaration(NamedIndividual(:user1))
+Declaration(NamedIndividual(:user2))
+Declaration(NamedIndividual(:user3))
+Declaration(NamedIndividual(:user4))
+Declaration(NamedIndividual(:user5))
+############################
+#   Object Properties
+############################
+
+# Object Property: :hasComment (:hasComment)
+
+ObjectPropertyDomain(:hasComment ObjectUnionOf(:Comment <http://www.w3.org/ns/ma-ont#MediaResource>))
+ObjectPropertyRange(:hasComment :Comment)
+
+# Object Property: :hasCommetedAt (:hasCommetedAt)
+
+ObjectPropertyDomain(:hasCommetedAt <http://www.w3.org/ns/ma-ont#Agent>)
+ObjectPropertyRange(:hasCommetedAt ObjectUnionOf(:Comment <http://www.w3.org/ns/ma-ont#MediaResource>))
+
+# Object Property: :hasFamily (:hasFamily)
+
+SymmetricObjectProperty(:hasFamily)
+IrreflexiveObjectProperty(:hasFamily)
+ObjectPropertyDomain(:hasFamily <http://www.w3.org/ns/ma-ont#Agent>)
+ObjectPropertyRange(:hasFamily <http://www.w3.org/ns/ma-ont#Agent>)
+
+# Object Property: :hasFriend (:hasFriend)
+
+SymmetricObjectProperty(:hasFriend)
+IrreflexiveObjectProperty(:hasFriend)
+ObjectPropertyDomain(:hasFriend <http://www.w3.org/ns/ma-ont#Agent>)
+ObjectPropertyRange(:hasFriend <http://www.w3.org/ns/ma-ont#Agent>)
+
+# Object Property: :hasLiked (:hasLiked)
+
+ObjectPropertyDomain(:hasLiked <http://www.w3.org/ns/ma-ont#Agent>)
+ObjectPropertyRange(:hasLiked ObjectUnionOf(:Comment <http://www.w3.org/ns/ma-ont#MediaResource>))
+
+# Object Property: :hasShared (:hasShared)
+
+ObjectPropertyDomain(:hasShared <http://www.w3.org/ns/ma-ont#Agent>)
+ObjectPropertyRange(:hasShared <http://www.w3.org/ns/ma-ont#MediaResource>)
+
+# Object Property: :hasTag (:hasTag)
+
+ObjectPropertyDomain(:hasTag ObjectUnionOf(:Comment <http://www.w3.org/ns/ma-ont#MediaResource>))
+ObjectPropertyRange(:hasTag :Tag)
+
+# Object Property: :hasTaggedAt (:hasTaggedAt)
+
+ObjectPropertyDomain(:hasTaggedAt <http://www.w3.org/ns/ma-ont#Agent>)
+ObjectPropertyRange(:hasTaggedAt ObjectUnionOf(:Comment <http://www.w3.org/ns/ma-ont#MediaResource>))
+
+# Object Property: :hasUploaded (:hasUploaded)
+
+ObjectPropertyDomain(:hasUploaded <http://www.w3.org/ns/ma-ont#Agent>)
+ObjectPropertyRange(:hasUploaded <http://www.w3.org/ns/ma-ont#MediaResource>)
+
+# Object Property: :isTaggedAt (:isTaggedAt)
+
+ObjectPropertyDomain(:isTaggedAt <http://www.w3.org/ns/ma-ont#Agent>)
+ObjectPropertyRange(:isTaggedAt ObjectUnionOf(:Comment <http://www.w3.org/ns/ma-ont#MediaResource>))
+
+# Object Property: :owner (:owner)
+
+ObjectPropertyRange(:owner <http://www.w3.org/ns/ma-ont#Agent>)
+
+# Object Property: :profilePhoto (:profilePhoto)
+
+ObjectPropertyRange(:profilePhoto <http://www.w3.org/ns/ma-ont#Image>)
+
+# Object Property: <http://www.w3.org/ns/ma-ont#hasFormat> (<http://www.w3.org/ns/ma-ont#hasFormat>)
+
+ObjectPropertyRange(<http://www.w3.org/ns/ma-ont#hasFormat> DataSomeValuesFrom(:format xsd:string))
+
+
+############################
+#   Data Properties
+############################
+
+# Data Property: :birthday (:birthday)
+
+DataPropertyDomain(:birthday <http://www.w3.org/ns/ma-ont#Agent>)
+DataPropertyRange(:birthday xsd:dateTime)
+
+# Data Property: :firstName (:firstName)
+
+SubDataPropertyOf(:firstName :name)
+DataPropertyRange(:firstName xsd:string)
+
+# Data Property: :format (:format)
+
+DataPropertyDomain(:format <http://www.w3.org/ns/ma-ont#MediaResource>)
+DataPropertyRange(:format xsd:string)
+
+# Data Property: :gender (:gender)
+
+DataPropertyDomain(:gender <http://www.w3.org/ns/ma-ont#Agent>)
+DataPropertyRange(:gender xsd:string)
+
+# Data Property: :id (:id)
+
+DataPropertyRange(:id rdfs:Literal)
+
+# Data Property: :lastName (:lastName)
+
+SubDataPropertyOf(:lastName :name)
+DataPropertyRange(:lastName xsd:string)
+
+# Data Property: :name (:name)
+
+DataPropertyDomain(:name <http://www.w3.org/ns/ma-ont#Agent>)
+
+# Data Property: :nickname (:nickname)
+
+SubDataPropertyOf(:nickname :name)
+DataPropertyRange(:nickname xsd:string)
+
+# Data Property: :owner (:owner)
+
+DataPropertyDomain(:owner ObjectUnionOf(:Comment :Tag))
+
+# Data Property: :phoneNumber (:phoneNumber)
+
+DataPropertyDomain(:phoneNumber <http://www.w3.org/ns/ma-ont#Agent>)
+DataPropertyRange(:phoneNumber rdfs:Literal)
+
+# Data Property: :profilePhoto (:profilePhoto)
+
+DataPropertyDomain(:profilePhoto <http://www.w3.org/ns/ma-ont#Agent>)
+
+# Data Property: :text (:text)
+
+DataPropertyDomain(:text ObjectUnionOf(:Comment :Tag))
+DataPropertyRange(:text xsd:string)
+
+# Data Property: <http://www.w3.org/ns/ma-ont#date> (<http://www.w3.org/ns/ma-ont#date>)
+
+DataPropertyRange(<http://www.w3.org/ns/ma-ont#date> xsd:dateTime)
+
+# Data Property: <http://www.w3.org/ns/ma-ont#description> (<http://www.w3.org/ns/ma-ont#description>)
+
+DataPropertyRange(<http://www.w3.org/ns/ma-ont#description> xsd:string)
+
+# Data Property: <http://www.w3.org/ns/ma-ont#title> (<http://www.w3.org/ns/ma-ont#title>)
+
+DataPropertyRange(<http://www.w3.org/ns/ma-ont#title> xsd:string)
+
+
+
+############################
+#   Classes
+############################
+
+# Class: :Audio (:Audio)
+
+SubClassOf(:Audio <http://www.w3.org/ns/ma-ont#MediaResource>)
+
+# Class: :Comment (:Comment)
+
+DisjointClasses(:Comment <http://www.w3.org/ns/ma-ont#Agent>)
+DisjointClasses(:Comment <http://www.w3.org/ns/ma-ont#Collection>)
+DisjointClasses(:Comment <http://www.w3.org/ns/ma-ont#MediaResource>)
+DisjointClasses(:Comment <http://www.w3.org/ns/ma-ont#Rating>)
+DisjointClasses(:Comment <http://www.w3.org/ns/ma-ont#TargetAudience>)
+
+# Class: :Document (:Document)
+
+SubClassOf(:Document <http://www.w3.org/ns/ma-ont#MediaResource>)
+
+# Class: :Tag (:Tag)
+
+DisjointClasses(:Tag <http://www.w3.org/ns/ma-ont#Agent>)
+DisjointClasses(:Tag <http://www.w3.org/ns/ma-ont#Collection>)
+DisjointClasses(:Tag <http://www.w3.org/ns/ma-ont#MediaResource>)
+DisjointClasses(:Tag <http://www.w3.org/ns/ma-ont#Rating>)
+DisjointClasses(:Tag <http://www.w3.org/ns/ma-ont#TargetAudience>)
+
+# Class: :Video (:Video)
+
+SubClassOf(:Video <http://www.w3.org/ns/ma-ont#MediaResource>)
+
+
+############################
+#   Named Individuals
+############################
+
+# Individual: :FlickrPhoto (:FlickrPhoto)
+
+ClassAssertion(<http://www.w3.org/ns/ma-ont#Image> :FlickrPhoto)
+DataPropertyAssertion(:format :FlickrPhoto "Glass negatives."^^xsd:string)
+DataPropertyAssertion(:id :FlickrPhoto "photo1"^^rdfs:Literal)
+DataPropertyAssertion(<http://www.w3.org/ns/ma-ont#description> :FlickrPhoto "https://www.flickr.com/photos/library_of_congress/4733201712/meta/"^^xsd:string)
+DataPropertyAssertion(<http://www.w3.org/ns/ma-ont#mainOriginalTitle> :FlickrPhoto "Exif"^^xsd:string)
+
+# Individual: :Profile1 (:Profile1)
+
+ClassAssertion(<http://www.w3.org/ns/ma-ont#Image> :Profile1)
+DataPropertyAssertion(:format :Profile1 "jpg"^^xsd:string)
+DataPropertyAssertion(:id :Profile1 "photo2"^^rdfs:Literal)
+DataPropertyAssertion(<http://www.w3.org/ns/ma-ont#description> :Profile1 "http://gazettereview.com/wp-content/uploads/2016/03/facebook-avatar.jpg"^^xsd:string)
+DataPropertyAssertion(<http://www.w3.org/ns/ma-ont#mainOriginalTitle> :Profile1 "profilePicture"^^xsd:string)
+
+# Individual: :Profile2 (:Profile2)
+
+ClassAssertion(<http://www.w3.org/ns/ma-ont#Image> :Profile2)
+DataPropertyAssertion(:format :Profile2 "jpg"^^xsd:string)
+DataPropertyAssertion(:id :Profile2 "photo3"^^rdfs:Literal)
+DataPropertyAssertion(<http://www.w3.org/ns/ma-ont#description> :Profile2 "http://gazettereview.com/wp-content/uploads/2016/03/facebook-avatar.jpg"^^xsd:string)
+DataPropertyAssertion(<http://www.w3.org/ns/ma-ont#mainOriginalTitle> :Profile2 "profilePicture"^^xsd:string)
+
+# Individual: :Profile3 (:Profile3)
+
+ClassAssertion(<http://www.w3.org/ns/ma-ont#Image> :Profile3)
+DataPropertyAssertion(:format :Profile3 "jpg"^^xsd:string)
+DataPropertyAssertion(:id :Profile3 "photo4"^^rdfs:Literal)
+DataPropertyAssertion(<http://www.w3.org/ns/ma-ont#description> :Profile3 "http://gazettereview.com/wp-content/uploads/2016/03/facebook-avatar.jpg"^^xsd:string)
+DataPropertyAssertion(<http://www.w3.org/ns/ma-ont#mainOriginalTitle> :Profile3 "profilePicture"^^xsd:string)
+
+# Individual: :Profile4 (:Profile4)
+
+ClassAssertion(<http://www.w3.org/ns/ma-ont#Image> :Profile4)
+DataPropertyAssertion(:format :Profile4 "jpg"^^xsd:string)
+DataPropertyAssertion(:id :Profile4 "photo5"^^rdfs:Literal)
+DataPropertyAssertion(<http://www.w3.org/ns/ma-ont#description> :Profile4 "http://gazettereview.com/wp-content/uploads/2016/03/facebook-avatar.jpg"^^xsd:string)
+DataPropertyAssertion(<http://www.w3.org/ns/ma-ont#mainOriginalTitle> :Profile4 "profilePicture"^^xsd:string)
+
+# Individual: :Profile5 (:Profile5)
+
+ClassAssertion(<http://www.w3.org/ns/ma-ont#Image> :Profile5)
+DataPropertyAssertion(:id :Profile5 "photo6"^^rdfs:Literal)
+DataPropertyAssertion(<http://www.w3.org/ns/ma-ont#description> :Profile5 "http://gazettereview.com/wp-content/uploads/2016/03/facebook-avatar.jpg"^^xsd:string)
+DataPropertyAssertion(<http://www.w3.org/ns/ma-ont#mainOriginalTitle> :Profile5 "profilePicture"^^xsd:string)
+
+# Individual: :ProfileTulio (:ProfileTulio)
+
+ClassAssertion(<http://www.w3.org/ns/ma-ont#Image> :ProfileTulio)
+DataPropertyAssertion(:id :ProfileTulio "photo7"^^rdfs:Literal)
+DataPropertyAssertion(<http://www.w3.org/ns/ma-ont#description> :ProfileTulio "http://gazettereview.com/wp-content/uploads/2016/03/facebook-avatar.jpg"^^xsd:string)
+DataPropertyAssertion(<http://www.w3.org/ns/ma-ont#mainOriginalTitle> :ProfileTulio "profilePicture"^^xsd:string)
+
+# Individual: :Tulio (:Tulio)
+
+ClassAssertion(<http://www.w3.org/ns/ma-ont#Person> :Tulio)
+ObjectPropertyAssertion(:hasCommetedAt :Tulio :YouTubeVideo)
+ObjectPropertyAssertion(:hasFriend :Tulio :user1)
+ObjectPropertyAssertion(:hasFriend :Tulio :user2)
+ObjectPropertyAssertion(:hasFriend :Tulio :user3)
+ObjectPropertyAssertion(:hasLiked :Tulio :YouTubeVideo)
+ObjectPropertyAssertion(:hasUploaded :Tulio :WikipediaDocument)
+ObjectPropertyAssertion(:profilePhoto :Tulio :ProfileTulio)
+DataPropertyAssertion(:birthday :Tulio "1994-12-09T00:00:00"^^xsd:dateTime)
+DataPropertyAssertion(:firstName :Tulio "Tulio"^^xsd:string)
+DataPropertyAssertion(:gender :Tulio "Male"^^xsd:string)
+DataPropertyAssertion(:lastName :Tulio "Cavalcanti"^^xsd:string)
+DataPropertyAssertion(:phoneNumber :Tulio "+5581988344990"^^rdfs:Literal)
+DataPropertyAssertion(:profilePhoto :Tulio "")
+
+# Individual: :WikipediaDocument (:WikipediaDocument)
+
+ClassAssertion(:Document :WikipediaDocument)
+DataPropertyAssertion(:format :WikipediaDocument "text"^^xsd:string)
+DataPropertyAssertion(:id :WikipediaDocument "document1"^^rdfs:Literal)
+DataPropertyAssertion(<http://www.w3.org/ns/ma-ont#alternativeTitle> :WikipediaDocument "WikipediaDocument"^^xsd:string)
+DataPropertyAssertion(<http://www.w3.org/ns/ma-ont#description> :WikipediaDocument "https://moodle.univie.ac.at/pluginfile.php/936914/mod_resource/content/1/Wikipedia-Franz-Kafka.txt"^^xsd:string)
+
+# Individual: :YouTubeVideo (:YouTubeVideo)
+
+ClassAssertion(:Video :YouTubeVideo)
+ObjectPropertyAssertion(:hasComment :YouTubeVideo :YouTubeVideoTulioComment)
+DataPropertyAssertion(:id :YouTubeVideo "video1"^^rdfs:Literal)
+DataPropertyAssertion(<http://www.w3.org/ns/ma-ont#description> :YouTubeVideo "https://www.youtube.com/watch?v=zpJ9r-BmvYY"^^xsd:string)
+DataPropertyAssertion(<http://www.w3.org/ns/ma-ont#duration> :YouTubeVideo "5.32"^^xsd:decimal)
+DataPropertyAssertion(<http://www.w3.org/ns/ma-ont#mainOriginalTitle> :YouTubeVideo "Franz Kafka Mini Documentary"^^xsd:string)
+
+# Individual: :YouTubeVideoTulioComment (:YouTubeVideoTulioComment)
+
+ClassAssertion(:Comment :YouTubeVideoTulioComment)
+ObjectPropertyAssertion(:owner :YouTubeVideoTulioComment :Tulio)
+DataPropertyAssertion(:id :YouTubeVideoTulioComment "comment1"^^rdfs:Literal)
+DataPropertyAssertion(:text :YouTubeVideoTulioComment "cool video man!"^^xsd:string)
+DataPropertyAssertion(<http://www.w3.org/ns/ma-ont#creationDate> :YouTubeVideoTulioComment "2000-01-01T00:00:00"^^xsd:dateTime)
+
+# Individual: :user1 (:user1)
+
+ClassAssertion(<http://www.w3.org/ns/ma-ont#Person> :user1)
+ObjectPropertyAssertion(:hasFriend :user1 :Tulio)
+ObjectPropertyAssertion(:hasFriend :user1 :user2)
+ObjectPropertyAssertion(:hasLiked :user1 :WikipediaDocument)
+ObjectPropertyAssertion(:hasLiked :user1 :YouTubeVideo)
+ObjectPropertyAssertion(:profilePhoto :user1 :Profile1)
+DataPropertyAssertion(:birthday :user1 "2000-01-01T00:00:00"^^xsd:dateTime)
+DataPropertyAssertion(:firstName :user1 "user1 firstName"^^xsd:string)
+DataPropertyAssertion(:gender :user1 "female"^^xsd:string)
+DataPropertyAssertion(:lastName :user1 "user1 lastName"^^xsd:string)
+DataPropertyAssertion(:phoneNumber :user1 "+436601234567"^^rdfs:Literal)
+DataPropertyAssertion(:profilePhoto :user1 "")
+
+# Individual: :user2 (:user2)
+
+ClassAssertion(<http://www.w3.org/ns/ma-ont#Person> :user2)
+ObjectPropertyAssertion(:hasFriend :user2 :Tulio)
+ObjectPropertyAssertion(:hasFriend :user2 :user1)
+ObjectPropertyAssertion(:hasUploaded :user2 :YouTubeVideo)
+ObjectPropertyAssertion(:profilePhoto :user2 :Profile2)
+DataPropertyAssertion(:birthday :user2 "2000-01-01T00:00:00"^^xsd:dateTime)
+DataPropertyAssertion(:firstName :user2 "user2 firstName"^^xsd:string)
+DataPropertyAssertion(:gender :user2 "male"^^xsd:string)
+DataPropertyAssertion(:lastName :user2 "user2 lastName"^^xsd:string)
+DataPropertyAssertion(:phoneNumber :user2 "+436601234567"^^rdfs:Literal)
+DataPropertyAssertion(:profilePhoto :user2 "")
+
+# Individual: :user3 (:user3)
+
+ClassAssertion(<http://www.w3.org/ns/ma-ont#Person> :user3)
+ObjectPropertyAssertion(:hasFriend :user3 :Tulio)
+ObjectPropertyAssertion(:hasFriend :user3 :user4)
+ObjectPropertyAssertion(:hasFriend :user3 :user5)
+ObjectPropertyAssertion(:hasLiked :user3 :WikipediaDocument)
+ObjectPropertyAssertion(:profilePhoto :user3 :Profile3)
+DataPropertyAssertion(:birthday :user3 "2000-01-01T00:00:00"^^xsd:dateTime)
+DataPropertyAssertion(:firstName :user3 "user3 firstName"^^xsd:string)
+DataPropertyAssertion(:gender :user3 "female"^^xsd:string)
+DataPropertyAssertion(:lastName :user3 "user3 lastName"^^xsd:string)
+DataPropertyAssertion(:phoneNumber :user3 "+436601234567"^^rdfs:Literal)
+DataPropertyAssertion(:profilePhoto :user3 "")
+
+# Individual: :user4 (:user4)
+
+ClassAssertion(<http://www.w3.org/ns/ma-ont#Person> :user4)
+ObjectPropertyAssertion(:hasFriend :user4 :user3)
+ObjectPropertyAssertion(:hasUploaded :user4 :FlickrPhoto)
+ObjectPropertyAssertion(:profilePhoto :user4 :Profile4)
+DataPropertyAssertion(:birthday :user4 "2000-01-01T00:00:00"^^xsd:dateTime)
+DataPropertyAssertion(:firstName :user4 "user4 firstName"^^xsd:string)
+DataPropertyAssertion(:gender :user4 "female"^^xsd:string)
+DataPropertyAssertion(:lastName :user4 "user4 lastName"^^xsd:string)
+DataPropertyAssertion(:phoneNumber :user4 "+436601234567"^^rdfs:Literal)
+DataPropertyAssertion(:profilePhoto :user4 "")
+
+# Individual: :user5 (:user5)
+
+ClassAssertion(<http://www.w3.org/ns/ma-ont#Person> :user5)
+ObjectPropertyAssertion(:hasFriend :user5 :user3)
+ObjectPropertyAssertion(:profilePhoto :user5 :Profile5)
+DataPropertyAssertion(:birthday :user5 "2000-01-01T00:00:00"^^xsd:dateTime)
+DataPropertyAssertion(:firstName :user5 "user5 firstName"^^xsd:string)
+DataPropertyAssertion(:gender :user5 "male"^^xsd:string)
+DataPropertyAssertion(:lastName :user5 "user5 lastName"^^xsd:string)
+DataPropertyAssertion(:phoneNumber :user5 "+436601234567"^^rdfs:Literal)
+DataPropertyAssertion(:profilePhoto :user5 "")
+
+
+DisjointClasses(:Audio :Document :Video)
+DifferentIndividuals(:Profile1 :Profile2 :Profile3 :Profile4 :Profile5 :ProfileTulio)
+DifferentIndividuals(:Tulio :user1 :user2 :user3 :user4 :user5)
+)

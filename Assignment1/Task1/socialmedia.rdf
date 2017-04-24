@@ -1,0 +1,720 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#"
+     xml:base="http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia"
+     xmlns:ma-ont="http://www.w3.org/ns/ma-ont#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia">
+        <owl:imports rdf:resource="http://www.w3.org/ns/ma-ont"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#hasComment -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#hasComment">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#Comment"/>
+                    <rdf:Description rdf:about="http://www.w3.org/ns/ma-ont#MediaResource"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#Comment"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#hasCommetedAt -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#hasCommetedAt">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/ma-ont#Agent"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#Comment"/>
+                    <rdf:Description rdf:about="http://www.w3.org/ns/ma-ont#MediaResource"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#hasFamily -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#hasFamily">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/ma-ont#Agent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/ma-ont#Agent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#hasFriend -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#hasFriend">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/ma-ont#Agent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/ma-ont#Agent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#hasLiked -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#hasLiked">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/ma-ont#Agent"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#Comment"/>
+                    <rdf:Description rdf:about="http://www.w3.org/ns/ma-ont#MediaResource"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#hasShared -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#hasShared">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/ma-ont#Agent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/ma-ont#MediaResource"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#hasTag -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#hasTag">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#Comment"/>
+                    <rdf:Description rdf:about="http://www.w3.org/ns/ma-ont#MediaResource"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#Tag"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#hasTaggedAt -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#hasTaggedAt">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/ma-ont#Agent"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#Comment"/>
+                    <rdf:Description rdf:about="http://www.w3.org/ns/ma-ont#MediaResource"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#hasUploaded -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#hasUploaded">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/ma-ont#Agent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/ma-ont#MediaResource"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#isTaggedAt -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#isTaggedAt">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/ma-ont#Agent"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#Comment"/>
+                    <rdf:Description rdf:about="http://www.w3.org/ns/ma-ont#MediaResource"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#owner -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#owner">
+        <rdfs:range rdf:resource="http://www.w3.org/ns/ma-ont#Agent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#profilePhoto -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#profilePhoto">
+        <rdfs:range rdf:resource="http://www.w3.org/ns/ma-ont#Image"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#hasFormat -->
+
+    <rdf:Description rdf:about="http://www.w3.org/ns/ma-ont#hasFormat">
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#format"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#birthday -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#birthday">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/ma-ont#Agent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#firstName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#firstName">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#name"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#format -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#format">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/ma-ont#MediaResource"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#gender -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#gender">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/ma-ont#Agent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#id -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#id">
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#lastName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#lastName">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#name"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#name">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/ma-ont#Agent"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#nickname -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#nickname">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#name"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#owner -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#owner">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#Comment"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#Tag"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#phoneNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#phoneNumber">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/ma-ont#Agent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#profilePhoto -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#profilePhoto">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/ma-ont#Agent"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#text -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#text">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#Comment"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#Tag"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#date -->
+
+    <rdf:Description rdf:about="http://www.w3.org/ns/ma-ont#date">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#description -->
+
+    <rdf:Description rdf:about="http://www.w3.org/ns/ma-ont#description">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#title -->
+
+    <rdf:Description rdf:about="http://www.w3.org/ns/ma-ont#title">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#Audio -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#Audio">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/ma-ont#MediaResource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#Comment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#Comment">
+        <owl:disjointWith rdf:resource="http://www.w3.org/ns/ma-ont#Agent"/>
+        <owl:disjointWith rdf:resource="http://www.w3.org/ns/ma-ont#Collection"/>
+        <owl:disjointWith rdf:resource="http://www.w3.org/ns/ma-ont#MediaResource"/>
+        <owl:disjointWith rdf:resource="http://www.w3.org/ns/ma-ont#Rating"/>
+        <owl:disjointWith rdf:resource="http://www.w3.org/ns/ma-ont#TargetAudience"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#Document -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#Document">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/ma-ont#MediaResource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#Tag -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#Tag">
+        <owl:disjointWith rdf:resource="http://www.w3.org/ns/ma-ont#Agent"/>
+        <owl:disjointWith rdf:resource="http://www.w3.org/ns/ma-ont#Collection"/>
+        <owl:disjointWith rdf:resource="http://www.w3.org/ns/ma-ont#MediaResource"/>
+        <owl:disjointWith rdf:resource="http://www.w3.org/ns/ma-ont#Rating"/>
+        <owl:disjointWith rdf:resource="http://www.w3.org/ns/ma-ont#TargetAudience"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#Video -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#Video">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/ma-ont#MediaResource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#Agent -->
+
+    <rdf:Description rdf:about="http://www.w3.org/ns/ma-ont#Agent"/>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#Collection -->
+
+    <rdf:Description rdf:about="http://www.w3.org/ns/ma-ont#Collection"/>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#MediaResource -->
+
+    <rdf:Description rdf:about="http://www.w3.org/ns/ma-ont#MediaResource"/>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#Rating -->
+
+    <rdf:Description rdf:about="http://www.w3.org/ns/ma-ont#Rating"/>
+    
+
+
+    <!-- http://www.w3.org/ns/ma-ont#TargetAudience -->
+
+    <rdf:Description rdf:about="http://www.w3.org/ns/ma-ont#TargetAudience"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#FlickrPhoto -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#FlickrPhoto">
+        <rdf:type rdf:resource="http://www.w3.org/ns/ma-ont#Image"/>
+        <format rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Glass negatives.</format>
+        <id rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">photo1</id>
+        <ma-ont:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.flickr.com/photos/library_of_congress/4733201712/meta/</ma-ont:description>
+        <ma-ont:mainOriginalTitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Exif</ma-ont:mainOriginalTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#Profile1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#Profile1">
+        <rdf:type rdf:resource="http://www.w3.org/ns/ma-ont#Image"/>
+        <format rdf:datatype="http://www.w3.org/2001/XMLSchema#string">jpg</format>
+        <id rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">photo2</id>
+        <ma-ont:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://gazettereview.com/wp-content/uploads/2016/03/facebook-avatar.jpg</ma-ont:description>
+        <ma-ont:mainOriginalTitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">profilePicture</ma-ont:mainOriginalTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#Profile2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#Profile2">
+        <rdf:type rdf:resource="http://www.w3.org/ns/ma-ont#Image"/>
+        <format rdf:datatype="http://www.w3.org/2001/XMLSchema#string">jpg</format>
+        <id rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">photo3</id>
+        <ma-ont:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://gazettereview.com/wp-content/uploads/2016/03/facebook-avatar.jpg</ma-ont:description>
+        <ma-ont:mainOriginalTitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">profilePicture</ma-ont:mainOriginalTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#Profile3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#Profile3">
+        <rdf:type rdf:resource="http://www.w3.org/ns/ma-ont#Image"/>
+        <format rdf:datatype="http://www.w3.org/2001/XMLSchema#string">jpg</format>
+        <id rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">photo4</id>
+        <ma-ont:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://gazettereview.com/wp-content/uploads/2016/03/facebook-avatar.jpg</ma-ont:description>
+        <ma-ont:mainOriginalTitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">profilePicture</ma-ont:mainOriginalTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#Profile4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#Profile4">
+        <rdf:type rdf:resource="http://www.w3.org/ns/ma-ont#Image"/>
+        <format rdf:datatype="http://www.w3.org/2001/XMLSchema#string">jpg</format>
+        <id rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">photo5</id>
+        <ma-ont:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://gazettereview.com/wp-content/uploads/2016/03/facebook-avatar.jpg</ma-ont:description>
+        <ma-ont:mainOriginalTitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">profilePicture</ma-ont:mainOriginalTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#Profile5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#Profile5">
+        <rdf:type rdf:resource="http://www.w3.org/ns/ma-ont#Image"/>
+        <id rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">photo6</id>
+        <ma-ont:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://gazettereview.com/wp-content/uploads/2016/03/facebook-avatar.jpg</ma-ont:description>
+        <ma-ont:mainOriginalTitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">profilePicture</ma-ont:mainOriginalTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#ProfileTulio -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#ProfileTulio">
+        <rdf:type rdf:resource="http://www.w3.org/ns/ma-ont#Image"/>
+        <id rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">photo7</id>
+        <ma-ont:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://gazettereview.com/wp-content/uploads/2016/03/facebook-avatar.jpg</ma-ont:description>
+        <ma-ont:mainOriginalTitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">profilePicture</ma-ont:mainOriginalTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#Tulio -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#Tulio">
+        <rdf:type rdf:resource="http://www.w3.org/ns/ma-ont#Person"/>
+        <hasCommetedAt rdf:resource="http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#YouTubeVideo"/>
+        <hasFriend rdf:resource="http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#user1"/>
+        <hasFriend rdf:resource="http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#user2"/>
+        <hasFriend rdf:resource="http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#user3"/>
+        <hasLiked rdf:resource="http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#YouTubeVideo"/>
+        <hasUploaded rdf:resource="http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#WikipediaDocument"/>
+        <profilePhoto rdf:resource="http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#ProfileTulio"/>
+        <birthday rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1994-12-09T00:00:00</birthday>
+        <firstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tulio</firstName>
+        <gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Male</gender>
+        <lastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cavalcanti</lastName>
+        <phoneNumber rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">+5581988344990</phoneNumber>
+        <profilePhoto></profilePhoto>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#WikipediaDocument -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#WikipediaDocument">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#Document"/>
+        <format rdf:datatype="http://www.w3.org/2001/XMLSchema#string">text</format>
+        <id rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">document1</id>
+        <ma-ont:alternativeTitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WikipediaDocument</ma-ont:alternativeTitle>
+        <ma-ont:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://moodle.univie.ac.at/pluginfile.php/936914/mod_resource/content/1/Wikipedia-Franz-Kafka.txt</ma-ont:description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#YouTubeVideo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#YouTubeVideo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#Video"/>
+        <hasComment rdf:resource="http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#YouTubeVideoTulioComment"/>
+        <id rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">video1</id>
+        <ma-ont:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.youtube.com/watch?v=zpJ9r-BmvYY</ma-ont:description>
+        <ma-ont:duration rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5.32</ma-ont:duration>
+        <ma-ont:mainOriginalTitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Franz Kafka Mini Documentary</ma-ont:mainOriginalTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#YouTubeVideoTulioComment -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#YouTubeVideoTulioComment">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#Comment"/>
+        <owner rdf:resource="http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#Tulio"/>
+        <id rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">comment1</id>
+        <text rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cool video man!</text>
+        <ma-ont:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2000-01-01T00:00:00</ma-ont:creationDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#user1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#user1">
+        <rdf:type rdf:resource="http://www.w3.org/ns/ma-ont#Person"/>
+        <hasFriend rdf:resource="http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#Tulio"/>
+        <hasFriend rdf:resource="http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#user2"/>
+        <hasLiked rdf:resource="http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#WikipediaDocument"/>
+        <hasLiked rdf:resource="http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#YouTubeVideo"/>
+        <profilePhoto rdf:resource="http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#Profile1"/>
+        <birthday rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2000-01-01T00:00:00</birthday>
+        <firstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">user1 firstName</firstName>
+        <gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">female</gender>
+        <lastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">user1 lastName</lastName>
+        <phoneNumber rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">+436601234567</phoneNumber>
+        <profilePhoto></profilePhoto>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#user2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#user2">
+        <rdf:type rdf:resource="http://www.w3.org/ns/ma-ont#Person"/>
+        <hasFriend rdf:resource="http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#Tulio"/>
+        <hasFriend rdf:resource="http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#user1"/>
+        <hasUploaded rdf:resource="http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#YouTubeVideo"/>
+        <profilePhoto rdf:resource="http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#Profile2"/>
+        <birthday rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2000-01-01T00:00:00</birthday>
+        <firstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">user2 firstName</firstName>
+        <gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">male</gender>
+        <lastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">user2 lastName</lastName>
+        <phoneNumber rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">+436601234567</phoneNumber>
+        <profilePhoto></profilePhoto>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#user3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#user3">
+        <rdf:type rdf:resource="http://www.w3.org/ns/ma-ont#Person"/>
+        <hasFriend rdf:resource="http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#Tulio"/>
+        <hasFriend rdf:resource="http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#user4"/>
+        <hasFriend rdf:resource="http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#user5"/>
+        <hasLiked rdf:resource="http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#WikipediaDocument"/>
+        <profilePhoto rdf:resource="http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#Profile3"/>
+        <birthday rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2000-01-01T00:00:00</birthday>
+        <firstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">user3 firstName</firstName>
+        <gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">female</gender>
+        <lastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">user3 lastName</lastName>
+        <phoneNumber rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">+436601234567</phoneNumber>
+        <profilePhoto></profilePhoto>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#user4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#user4">
+        <rdf:type rdf:resource="http://www.w3.org/ns/ma-ont#Person"/>
+        <hasFriend rdf:resource="http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#user3"/>
+        <hasUploaded rdf:resource="http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#FlickrPhoto"/>
+        <profilePhoto rdf:resource="http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#Profile4"/>
+        <birthday rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2000-01-01T00:00:00</birthday>
+        <firstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">user4 firstName</firstName>
+        <gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">female</gender>
+        <lastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">user4 lastName</lastName>
+        <phoneNumber rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">+436601234567</phoneNumber>
+        <profilePhoto></profilePhoto>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#user5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#user5">
+        <rdf:type rdf:resource="http://www.w3.org/ns/ma-ont#Person"/>
+        <hasFriend rdf:resource="http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#user3"/>
+        <profilePhoto rdf:resource="http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#Profile5"/>
+        <birthday rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2000-01-01T00:00:00</birthday>
+        <firstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">user5 firstName</firstName>
+        <gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">male</gender>
+        <lastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">user5 lastName</lastName>
+        <phoneNumber rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">+436601234567</phoneNumber>
+        <profilePhoto></profilePhoto>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#Audio"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#Document"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#Video"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#Profile1"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#Profile2"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#Profile3"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#Profile4"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#Profile5"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#ProfileTulio"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#Tulio"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#user1"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#user2"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#user3"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#user4"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/tuliocavalcanti/ontologies/2017/3/socialmedia#user5"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+
